@@ -18,13 +18,15 @@ while morse_tool:
 
     morse_list = [dictionary[letter] for letter in user_input]
 
+    # Print string of the morse code with space separators
+    print(f"The Morse translation is: {" ".join(morse_list)}")
+
     # Go through each letter, and look up morse. For each component in Morse, play short or long beep
     for code in morse_list:
         for item in code:
             os.system("afplay " + long_file) if item == '-' else os.system("afplay " + short_file)
 
-    # Print string of the morse code with space separators
-    print(f"The Morse translation is: {" ".join(morse_list)}")
+
 
     # Check if user wants another word translated, end program if not, otherwise rerun
     check_for_more = input("Do you want to do another, Y/N? ").upper()
