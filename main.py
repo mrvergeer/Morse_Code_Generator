@@ -26,8 +26,6 @@ while morse_tool:
         for item in code:
             os.system("afplay " + long_file) if item == '-' else os.system("afplay " + short_file)
 
-
-
     # Check if user wants another word translated, end program if not, otherwise rerun
     check_for_more = input("Do you want to do another, Y/N? ").upper()
     morse_tool = False if check_for_more != "Y" else True
